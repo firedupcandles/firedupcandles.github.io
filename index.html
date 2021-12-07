@@ -6,18 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -65,9 +57,66 @@
         <div class="main-slika-container">
           <img
             src="assets/images/slika1.svg"
-            alt="praznicna slika"
+            alt="Praznicna slika"
             id="main-slika"
           />
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="email-modal">
+      <div class="modal-content">
+        <span class="close-btn"> &times; </span>
+        <div class="modal-content-levo">
+          <img src="assets/images/slikamodal.svg" alt="Pokloni" id="modal-slika" />
+        </div>
+        <div class="modal-content-desno">
+          <form action="/" method="GET" class="modal-form" id="form">
+            <h1>
+              Nulla at dolor rhoncus, hendrerit lorem sed, imperdiet arcu.
+            </h1>
+            <div class="form-validacija">
+              <input
+                type="text"
+                class="modal-input"
+                id="ime"
+                name="ime"
+                placeholder="Uneti ime"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validacija">
+              <input
+                type="email"
+                class="modal-input"
+                id="email"
+                name="email"
+                placeholder="Uneti email"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validacija">
+              <input
+                type="password"
+                class="modal-input"
+                id="password"
+                name="password"
+                placeholder="Uneti sifru"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validacija">
+              <input
+                type="password"
+                class="modal-input"
+                id="password-potvrda"
+                name="ime"
+                placeholder="Uneti sifru opet"
+              />
+              <p>Error Message</p>
+            </div>
+            <input type="submit" value="Prijavite se" class="modal-input-btn">
+            <p>Vec imate nalog? Ulogujte se<span class="modal-input-prijava"><a href"#"> ovde</a></span></p>
+          </form>
         </div>
       </div>
     </div>

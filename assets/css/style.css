@@ -4,6 +4,8 @@
   --krem: #9a8873;
   --najtamnija: #171614;
   --zelena: #37423d;
+  --errorBoja: #d83434;
+  --ispravnaBoja: #58c258;
 }
 
 * {
@@ -12,6 +14,7 @@
   padding: 0;
   font-family: "DM Serif Text", serif;
 }
+/*heder i meni*/
 .nav-container {
   width: 100%;
   background-color: var(--najtamnija);
@@ -76,6 +79,7 @@
   transition: all 0.3s ease-in-out;
   background: var(--krem);
 }
+/*praznicna ponuda*/
 .main {
   background-color: var(--krem);
 }
@@ -144,6 +148,149 @@
 .main-slika-container {
   text-align: center;
 }
+/*ulogujte se*/
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.modal-content {
+  background: #f4f4f4;
+  margin: 10% auto;
+  width: 60%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), o 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 3px;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.close-btn {
+  position: absolute;
+  right: 3%;
+  font-size: 30px;
+  z-index: 3;
+}
+.close-btn:hover {
+  cursor: pointer;
+  color: var(--zelena);
+  transition: 0.2s ease-out;
+}
+.modal-content-levo {
+  background: linear-gradient(
+    90deg,
+    rgb(166, 109, 92) 0%,
+    rgb(117, 76, 64) 100%
+  );
+  border-radius: 0 3px 3px 0;
+  position: relative;
+  width: 100%;
+}
+#modal-slika {
+  width: auto;
+  height: 33%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-content-desno {
+  border-radius: 0 3px 3px 0;
+  position: relative;
+  width: 100%;
+  background-color: rgba(154, 136, 115, 0.3);
+}
+.modal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.modal-form h1 {
+  font-size: 16px;
+  text-align: start;
+  margin-bottom: 16px;
+}
+.form-validacija {
+  margin-bottom: 8px;
+  width: 80%;
+}
+.form-validation.error {
+  margin-bottom: 8px;
+  position: relative;
+  border: 1px solid var(--errorBoja);
+  border-radius: 2px;
+}
+.form-validacija.valid {
+  margin-bottom: 8px;
+  position: relative;
+  border: 1px solid var(--ispravnaBoja);
+  border-radius: 2px;
+}
+.form-validacija p {
+  font-size: 11px;
+  margin-top: 8px;
+  color: var(--errorBoja);
+  position: absolute;
+  top: 28px;
+  display: none;
+}
+.form-validacija.error p {
+  display: block;
+}
+.modal-input {
+  display: block;
+  padding-left: 8px;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  height: 32px;
+  width: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.modal-input::placeholder {
+  color: var(--svetlosmedja);
+}
+.modal-input-btn {
+  width: 80%;
+  height: 32px;
+  border-radius: 2px;
+  background-color: var(--zelena);
+  outline: none;
+  border: none;
+  color: var(--krem);
+  font-size: 16px;
+}
+.modal-input-btn:hover {
+  cursor: pointer;
+  background-color: rgba(154, 136, 115, 0.3);
+  color: var(--zelena);
+  transition: all 0.4 ease-out;
+  border: 1px solid var(--zelena);
+  border-radius: 2px;
+}
+.modal-input-prijava {
+  margin-top: 16px;
+  color: var(--zelena);
+  width: 80%;
+  text-align: center;
+}
+.modal-input-prijava:hover {
+  cursor: pointer;
+  color: var(--najtamnija);
+}
 /*media screen*/
 @media screen and (max-width: 768px) {
   .nav-container {
@@ -178,13 +325,13 @@
     width: 100%;
     display: table;
   }
-.nav-linkovi:hover{
-  background-color: var(--krem);
-  color: var(--najtamnija);
-}
-.navbar {
-  width: 100%;
-}
+  .nav-linkovi:hover {
+    background-color: var(--krem);
+    color: var(--najtamnija);
+  }
+  .navbar {
+    width: 100%;
+  }
   .nav-linkovi:hover,
   .nav-linkovi-btn:hover {
     background-color: var(--krem);
@@ -259,6 +406,23 @@
   }
   #main-slika {
     display: none;
+  }
+  .modal-content-levo {
+    display: none;
+  }
+  .modal-content {
+    grid-template-columns: auto;
+    margin: 15% auto;
+    width: 70%;
+    height: 70%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .modal-content {
+    margin: 20% auto;
+    width: 90%;
+    height: 80%;
+  }
 }
 @media screen and (max-width: 480px) {
   .main-content {
