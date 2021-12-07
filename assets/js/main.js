@@ -40,12 +40,14 @@ function showError(input, message) {
 
   const errorMessage = formValidation.querySelector("p");
   errorMessage.innerText = message;
+  signUpError();
 }
 
 //Validna poruka
 function showValid(input) {
   const formValidation = input.parentElement;
   formValidation.className = "form-validacija valid";
+  signUpValid();
 }
 
 //Provera polja
@@ -59,7 +61,31 @@ function checkRequired(inputArr) {
   });
 }
 
-//Get field name
+//Provera duzine polja
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} mora da sadrzi minimum ${min} karaktera`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} mora da sadrzi manje od ${max} karaktera`
+    );
+  } else {
+    showValid(input);
+  }
+}
+
+//Provera poklapanja password-a
+function passwordMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, "Password se ne poklapa");
+  }
+}
+
+//Hvatanje imena polja
 function getFieldName(input) {
   return input.name.charAt(0).toUpperCase() + input.name.slice(1);
 }
@@ -69,4 +95,24 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   checkRequired([ime, email, password, passwordPotvrda]);
+  checkLength(ime, 3, 30);
+  checkLength(password, 8, 25);
+  checkLength(passwordPotvrda, 8, 25);
+  passwordMatch(password, passwordPotvrda);
 });
+
+//Obavestenje o prijavi
+function signUpValid() {
+  const modalBtn = document.querySelector(".modal-input-btn");
+  const uspesnaPrijava = document.querySelector(".uspesna-prijava");
+  modalBtn.addEventListener("click", () => {
+    uspesnaPrijava.style.display = "block";
+  });
+}
+function signUpError() {
+  const modalBtn = document.querySelector(".modal-input-btn");
+  const uspesnaPrijava = document.querySelector(".uspesna-prijava");
+  modalBtn.addEventListener("click", () => {
+    uspesnaPrijava.style.display = "none";
+  });
+}

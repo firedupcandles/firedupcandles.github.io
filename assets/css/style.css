@@ -290,6 +290,10 @@
   cursor: pointer;
   color: var(--najtamnija);
 }
+.uspesna-prijava {
+  display: none;
+  color: var(--zelena);
+}
 /*media screen*/
 @media screen and (max-width: 768px) {
   .nav-container {
