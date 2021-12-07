@@ -240,10 +240,9 @@
   border-radius: 2px;
 }
 .form-validacija p {
-  font-size: 11px;
+  font-size: 13px;
   margin-top: 8px;
   color: var(--errorBoja);
-  position: absolute;
   top: 28px;
   display: none;
 }

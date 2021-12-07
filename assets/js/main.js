@@ -35,24 +35,38 @@ const passwordPotvrda = document.getElementById("password-potvrda");
 
 //Error poruka
 function showError(input, message) {
-  const formPotvrda = input.parentElement;
-  formPotvrda.className = "form-validacija error";
+  const formValidation = input.parentElement;
+  formValidation.className = "form-validacija error";
 
-  const errorPoruka = formPotvrda.querySelector("p");
-  errorPoruka.innerText = message;
+  const errorMessage = formValidation.querySelector("p");
+  errorMessage.innerText = message;
+}
+
+//Validna poruka
+function showValid(input) {
+  const formValidation = input.parentElement;
+  formValidation.className = "form-validacija valid";
 }
 
 //Provera polja
 function checkRequired(inputArr) {
   inputArr.forEach(function (input) {
     if (input.value.trim() === "") {
-      showError(input, "Greska");
+      showError(input, `${getFieldName(input)} - unos neophodan`);
+    } else {
+      showValid(input);
     }
   });
 }
+
+//Get field name
+function getFieldName(input) {
+  return input.name.charAt(0).toUpperCase() + input.name.slice(1);
+}
+
 //Event Listeners za formu
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  proveraPolja([ime, email, password, passwordPotvrda]);
+  checkRequired([ime, email, password, passwordPotvrda]);
 });
