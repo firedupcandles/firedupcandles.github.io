@@ -66,12 +66,12 @@ function checkLength(input, min, max) {
   if (input.value.length < min) {
     showError(
       input,
-      `${getFieldName(input)} mora da sadrzi minimum ${min} karaktera`
+      `${getFieldName(input)} mora da sadrži minimum ${min} karaktera`
     );
   } else if (input.value.length > max) {
     showError(
       input,
-      `${getFieldName(input)} mora da sadrzi manje od ${max} karaktera`
+      `${getFieldName(input)} mora da sadrži manje od ${max} karaktera`
     );
   } else {
     showValid(input);
