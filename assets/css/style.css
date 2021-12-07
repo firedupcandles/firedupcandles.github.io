@@ -41,7 +41,6 @@
   text-align: center;
   width: 70%;
   justify-self: end;
-  margin-left: 30%;
 }
 #logo {
   text-decoration: none;
@@ -92,6 +91,7 @@
   justify-self: start;
   margin-left: 20px;
   color: var(--najtamnija);
+  width: 80%;
 }
 .main-content h1 {
   font-size: 30px;
@@ -163,7 +163,7 @@
     transition: all 0.5s ease;
   }
   #navbar-logo {
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 20px;
   }
   .nav-meni.active {
@@ -178,13 +178,24 @@
     width: 100%;
     display: table;
   }
+.nav-linkovi:hover{
+  background-color: var(--krem);
+  color: var(--najtamnija);
+}
+.navbar {
+  width: 100%;
+}
   .nav-linkovi:hover,
   .nav-linkovi-btn:hover {
     background-color: var(--krem);
     transition: all 0.2s ease-out;
     color: var(--najtamnija);
+    width: 100%;
   }
   .navbar {
+    width: 100%;
+  }
+  .nav-meni li {
     width: 100%;
   }
   .nav-linkovi-btn {
@@ -248,7 +259,6 @@
   }
   #main-slika {
     display: none;
-  }
 }
 @media screen and (max-width: 480px) {
   .main-content {
