@@ -148,7 +148,7 @@ if (galleryImages) {
         let calcImgToEdge = (windowWidth - imgWidth) / 2 - 80;
 
         let newNextBtn = document.createElement("a");
-        let btnNextText = document.createTextNode("Sledeca");
+        let btnNextText = document.createTextNode("Sledeća");
         newNextBtn.appendChild(btnNextText);
         container.appendChild(newNextBtn);
         newNextBtn.setAttribute("class", "img-btn-next");
