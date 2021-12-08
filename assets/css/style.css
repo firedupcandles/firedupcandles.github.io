@@ -549,6 +549,10 @@
     width: 90%;
     height: 80%;
   }
+  #index-gallery {
+    width: unset;
+    gap: unset;
+  }
 }
 @media screen and (max-width: 480px) {
   .main-content {
