@@ -91,7 +91,7 @@ body {
   background-image: url("../images/pozadina.jpg");
   background-position: 50% 50%;
   background-size: cover;
-  color: var(--krem);
+  color: antiquewhite;
 }
 .intro-content {
   width: 70%;
@@ -426,6 +426,9 @@ body {
   max-height: 80vh;
   max-width: 80vw;
 }
+.text-gallery {
+  display: none;
+}
 /*sledeca slika i prethodna slika                          */
 .img-btn-next {
   display: block;
@@ -637,6 +640,13 @@ body {
     width: 70%;
     height: 70%;
   }
+  .heading-jumbo {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .header-donji-txt {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 580px) {
   .modal-content {
@@ -651,6 +661,14 @@ body {
   }
   #index-gallery .img3 {
     height: 305px;
+  }
+  .text-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--krem);
+    margin-bottom: 20px;
   }
   .img-btn-next {
     right: 0 !important;
