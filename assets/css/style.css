@@ -489,7 +489,7 @@ body {
   transition: 0.2s ease-out;
 }
 .list {
-  margin-top: 0;
+  margin-top: 20px;
   padding: 0;
   list-style: none;
   font-size: 18px;
@@ -514,6 +514,38 @@ body {
   margin-top: 15px;
   text-align: center;
   font-size: 15px;
+}
+.contact {
+  color: var(--krem);
+  text-align: center;
+  font-size: 17.5px;
+}
+.fa-solid,
+.fas {
+  margin-right: 5px;
+}
+/*O nama                                                                      */
+.prvi-deo {
+  color: var(--krem);
+  text-align: left;
+}
+.drugi-deo {
+  background-color: var(--krem);
+  text-align: right;
+}
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.about-us-img {
+  height: 300px;
+  margin: 20px;
+}
+.about-us-txt,
+.about-us-naslov {
+  width: 80%;
 }
 /*media screen                                                                             */
 @media screen and (max-width: 768px) {
@@ -646,6 +678,14 @@ body {
   }
   .header-donji-txt {
     font-size: 25px;
+  }
+  .about-us {
+    display: grid;
+    text-align: center;
+  }
+  .about-us-txt,
+  .about-us-naslov {
+    width: 60%;
   }
 }
 @media screen and (max-width: 580px) {
