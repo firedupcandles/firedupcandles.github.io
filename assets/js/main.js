@@ -197,3 +197,10 @@ function changeImg(changeDir) {
 
   getLatestOpenedImg = calcNewImg;
 }
+
+//Alert za dostavu
+function showAlert() {
+  var dostava =
+    "Radimo na tome da omogućimo online poručivanje. Za sada, dostava nije moguća.";
+  alert(dostava);
+}
