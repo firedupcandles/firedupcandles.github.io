@@ -135,7 +135,7 @@ body {
   margin-left: 20px;
   color: var(--najtamnija);
 }
-.main-content h1 {
+.main-content h2 {
   font-size: 30px;
 }
 .main-content p {
@@ -256,7 +256,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.modal-form h1 {
+.modal-form h2 {
   font-size: 16px;
   text-align: start;
   margin-bottom: 16px;
@@ -341,7 +341,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 10px;
-  grid-template-areas: "gallery-h1 gallery-h1 gallery-h1 gallery-h1" "img1 img2 img3 img4" "img5 img6 img3 img7";
+  grid-template-areas: "gallery-h2 gallery-h2 gallery-h2 gallery-h2" "img1 img2 img3 img4" "img5 img6 img3 img7";
   width: 80%;
   margin: auto;
   padding-bottom: 40px;
@@ -354,8 +354,8 @@ body {
   background-position: center;
   cursor: pointer;
 }
-#index-gallery h1 {
-  grid-area: gallery-h1;
+#index-gallery h2 {
+  grid-area: gallery-h2;
   padding: 20px;
   color: var(--krem);
   font-size: 35px;
@@ -653,7 +653,7 @@ body {
     width: 80%;
     margin: 0;
   }
-  .main-content h1 {
+  .main-content h2 {
     font-size: 40px;
   }
   .main-content p {
@@ -738,7 +738,7 @@ body {
   .main-content {
     text-align: center;
   }
-  .main-content h1 {
+  .main-content h2 {
     font-size: 42px;
   }
   .main-content p {
